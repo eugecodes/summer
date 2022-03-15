@@ -1,0 +1,692 @@
+select c_custkey *  -128 as result  from customer
+ 
+select avg(c_custkey *  -232) as result  from customer where c_custkey in (-3293, -6022, -6298, -638, -1518, -5031, -2833, -6245, -6235, -2094, -2818)
+ 
+select customer.c_custkey *  -267 as result  from customer inner join orders on (customer.c_custkey *  -595) = (orders.o_custkey *  -434)
+ 
+select customer.c_custkey *  -490 as result , orders.o_custkey * customer.c_custkey as result2  from customer inner join orders on (customer.c_custkey *  -50) = (orders.o_custkey *  -283)
+ 
+select customer.c_custkey where customer.c_custkey * -944 between (-3293, -6022, -6298, -638, -1518, -5031, -2833, -6245, -6235, -2094, -2818)
+ 
+select customer.c_custkey *  -605 as result  from customer left outer join orders on (customer.c_custkey *  -392) = (orders.o_custkey *  -151)
+ 
+select customer.c_custkey *  -585 as result  from customer left outer join orders on (customer.c_custkey *  -646) = (orders.o_custkey * orders.o_shippriority *  -17)
+ 
+select c_name from customer where c_name between c_address and c_mktsegment 
+ 
+select c_address from customer where c_address between c_name and c_address 
+ 
+select c_nationkey *  -512 as result  from customer
+ 
+select avg(c_nationkey *  -189) as result  from customer where c_nationkey in (-8061, -268, -1130, -8004, -6843)
+ 
+select customer.c_nationkey *  -496 as result  from customer inner join orders on (customer.c_nationkey *  -497) = (orders.o_custkey *  -317)
+ 
+select customer.c_nationkey *  -102 as result , orders.o_custkey * customer.c_nationkey as result2  from customer inner join orders on (customer.c_nationkey *  -176) = (orders.o_custkey *  -1)
+ 
+select customer.c_nationkey where customer.c_nationkey * -5233 between (-8061, -268, -1130, -8004, -6843)
+ 
+select customer.c_nationkey *  -101 as result  from customer left outer join orders on (customer.c_nationkey *  -233) = (orders.o_custkey *  -556)
+ 
+select customer.c_nationkey *  -83 as result  from customer left outer join orders on (customer.c_nationkey *  -188) = (orders.o_custkey * orders.o_orderkey *  -42)
+ 
+select c_phone from customer where c_phone between c_name and c_mktsegment 
+ 
+select c_acctbal *  -493 as result  from customer
+ 
+select avg(c_acctbal *  -78) as result  from customer where c_acctbal in (-2945, -7872)
+ 
+select customer.c_acctbal *  -150 as result  from customer inner join partsupp on (customer.c_acctbal *  -613) = (partsupp.ps_supplycost *  -256)
+ 
+select customer.c_acctbal *  -663 as result , partsupp.ps_supplycost * customer.c_acctbal as result2  from customer inner join partsupp on (customer.c_acctbal *  -342) = (partsupp.ps_supplycost *  -569)
+ 
+select customer.c_acctbal where customer.c_acctbal * -9318 between (-2945, -7872)
+ 
+select customer.c_acctbal *  -437 as result  from customer left outer join partsupp on (customer.c_acctbal *  -37) = (partsupp.ps_supplycost *  -691)
+ 
+select customer.c_acctbal *  -15 as result  from customer left outer join partsupp on (customer.c_acctbal *  -84) = (partsupp.ps_supplycost * partsupp.ps_supplycost *  -655)
+ 
+select c_mktsegment from customer where c_mktsegment between c_address and c_mktsegment 
+ 
+select c_comment from customer where c_comment between c_comment and c_mktsegment 
+ 
+select l_orderkey *  -439 as result  from lineitem
+ 
+select avg(l_orderkey *  -11) as result  from lineitem where l_orderkey in (-5999, -1849, -2247, -2550, -8770, -1525, -6878, -6617, -1477, -2875, -3162, -6695, -6617, -4917, -8118, -3424, -2889)
+ 
+select lineitem.l_orderkey *  -235 as result  from lineitem inner join lineitem on (lineitem.l_orderkey *  -289) = (lineitem.l_orderkey *  -293)
+ 
+select lineitem.l_orderkey *  -130 as result , lineitem.l_orderkey * lineitem.l_orderkey as result2  from lineitem inner join lineitem on (lineitem.l_orderkey *  -465) = (lineitem.l_orderkey *  -404)
+ 
+select lineitem.l_orderkey where lineitem.l_orderkey * -4408 between (-5999, -1849, -2247, -2550, -8770, -1525, -6878, -6617, -1477, -2875, -3162, -6695, -6617, -4917, -8118, -3424, -2889)
+ 
+select lineitem.l_orderkey *  -547 as result  from lineitem left outer join lineitem on (lineitem.l_orderkey *  -319) = (lineitem.l_orderkey *  -157)
+ 
+select lineitem.l_orderkey *  -511 as result  from lineitem left outer join lineitem on (lineitem.l_orderkey *  -307) = (lineitem.l_orderkey * lineitem.l_linenumber *  -683)
+ 
+select l_partkey *  -32 as result  from lineitem
+ 
+select avg(l_partkey *  -279) as result  from lineitem where l_partkey in (-7624, -3119, -6538, -4708, -1020)
+ 
+select lineitem.l_partkey *  -144 as result  from lineitem inner join part on (lineitem.l_partkey *  -273) = (part.p_partkey *  -73)
+ 
+select lineitem.l_partkey *  -656 as result , part.p_partkey * lineitem.l_partkey as result2  from lineitem inner join part on (lineitem.l_partkey *  -616) = (part.p_partkey *  -549)
+ 
+select lineitem.l_partkey where lineitem.l_partkey * -861 between (-7624, -3119, -6538, -4708, -1020)
+ 
+select lineitem.l_partkey *  -506 as result  from lineitem left outer join part on (lineitem.l_partkey *  -81) = (part.p_partkey *  -376)
+ 
+select lineitem.l_partkey *  -676 as result  from lineitem left outer join part on (lineitem.l_partkey *  -577) = (part.p_partkey * part.p_size *  -457)
+ 
+select l_suppkey *  -368 as result  from lineitem
+ 
+select avg(l_suppkey *  -203) as result  from lineitem where l_suppkey in (-8927, -5720, -1328, -3602, -8918, -6444)
+ 
+select lineitem.l_suppkey *  -44 as result  from lineitem inner join customer on (lineitem.l_suppkey *  -370) = (customer.c_custkey *  -348)
+ 
+select lineitem.l_suppkey *  -344 as result , customer.c_custkey * lineitem.l_suppkey as result2  from lineitem inner join customer on (lineitem.l_suppkey *  -515) = (customer.c_custkey *  -334)
+ 
+select lineitem.l_suppkey where lineitem.l_suppkey * -1714 between (-8927, -5720, -1328, -3602, -8918, -6444)
+ 
+select lineitem.l_suppkey *  -252 as result  from lineitem left outer join customer on (lineitem.l_suppkey *  -698) = (customer.c_custkey *  -314)
+ 
+select lineitem.l_suppkey *  -659 as result  from lineitem left outer join customer on (lineitem.l_suppkey *  -209) = (customer.c_custkey * customer.c_custkey *  -137)
+ 
+select l_linenumber *  -433 as result  from lineitem
+ 
+select avg(l_linenumber *  -626) as result  from lineitem where l_linenumber in (-2855)
+ 
+select lineitem.l_linenumber *  -92 as result  from lineitem inner join customer on (lineitem.l_linenumber *  -1) = (customer.c_nationkey *  -271)
+ 
+select lineitem.l_linenumber *  -47 as result , customer.c_nationkey * lineitem.l_linenumber as result2  from lineitem inner join customer on (lineitem.l_linenumber *  -162) = (customer.c_nationkey *  -143)
+ 
+select lineitem.l_linenumber where lineitem.l_linenumber * -3937 between (-2855)
+ 
+select lineitem.l_linenumber *  -352 as result  from lineitem left outer join customer on (lineitem.l_linenumber *  -228) = (customer.c_nationkey *  -107)
+ 
+select lineitem.l_linenumber *  -437 as result  from lineitem left outer join customer on (lineitem.l_linenumber *  -633) = (customer.c_nationkey * customer.c_nationkey *  -212)
+ 
+select l_quantity *  -683 as result  from lineitem
+ 
+select avg(l_quantity *  -488) as result  from lineitem where l_quantity in (-790, -7360, -2087)
+ 
+select lineitem.l_quantity *  -332 as result  from lineitem inner join lineitem on (lineitem.l_quantity *  -570) = (lineitem.l_extendedprice *  -235)
+ 
+select lineitem.l_quantity *  -381 as result , lineitem.l_extendedprice * lineitem.l_quantity as result2  from lineitem inner join lineitem on (lineitem.l_quantity *  -618) = (lineitem.l_extendedprice *  -442)
+ 
+select lineitem.l_quantity where lineitem.l_quantity * -2015 between (-790, -7360, -2087)
+ 
+select lineitem.l_quantity *  -277 as result  from lineitem left outer join lineitem on (lineitem.l_quantity *  -648) = (lineitem.l_extendedprice *  -432)
+ 
+select lineitem.l_quantity *  -132 as result  from lineitem left outer join lineitem on (lineitem.l_quantity *  -309) = (lineitem.l_extendedprice * lineitem.l_extendedprice *  -89)
+ 
+select l_extendedprice *  -669 as result  from lineitem
+ 
+select avg(l_extendedprice *  -14) as result  from lineitem where l_extendedprice in (-3723, -4392, -2199, -7148, -8825, -5437, -3006, -385, -6972, -2733, -2108, -1977, -3223, -4019)
+ 
+select lineitem.l_extendedprice *  -529 as result  from lineitem inner join supplier on (lineitem.l_extendedprice *  -266) = (supplier.s_acctbal *  -136)
+ 
+select lineitem.l_extendedprice *  -200 as result , supplier.s_acctbal * lineitem.l_extendedprice as result2  from lineitem inner join supplier on (lineitem.l_extendedprice *  -249) = (supplier.s_acctbal *  -103)
+ 
+select lineitem.l_extendedprice where lineitem.l_extendedprice * -7715 between (-3723, -4392, -2199, -7148, -8825, -5437, -3006, -385, -6972, -2733, -2108, -1977, -3223, -4019)
+ 
+select lineitem.l_extendedprice *  -44 as result  from lineitem left outer join supplier on (lineitem.l_extendedprice *  -541) = (supplier.s_acctbal *  -544)
+ 
+select lineitem.l_extendedprice *  -12 as result  from lineitem left outer join supplier on (lineitem.l_extendedprice *  -42) = (supplier.s_acctbal * supplier.s_acctbal *  -194)
+ 
+select l_discount *  -106 as result  from lineitem
+ 
+select avg(l_discount *  -387) as result  from lineitem where l_discount in (-5812, -4156, -6094, -8115, -679, -5702, -5059, -8440, -1956, -2159, -4040, -8565, -4907, -746, -1728, -6501, -3742, -2741, -8308)
+ 
+select lineitem.l_discount *  -32 as result  from lineitem inner join customer on (lineitem.l_discount *  -246) = (customer.c_acctbal *  -221)
+ 
+select lineitem.l_discount *  -414 as result , customer.c_acctbal * lineitem.l_discount as result2  from lineitem inner join customer on (lineitem.l_discount *  -293) = (customer.c_acctbal *  -497)
+ 
+select lineitem.l_discount where lineitem.l_discount * -9350 between (-5812, -4156, -6094, -8115, -679, -5702, -5059, -8440, -1956, -2159, -4040, -8565, -4907, -746, -1728, -6501, -3742, -2741, -8308)
+ 
+select lineitem.l_discount *  -232 as result  from lineitem left outer join customer on (lineitem.l_discount *  -186) = (customer.c_acctbal *  -116)
+ 
+select lineitem.l_discount *  -82 as result  from lineitem left outer join customer on (lineitem.l_discount *  -136) = (customer.c_acctbal * customer.c_acctbal *  -474)
+ 
+select l_tax *  -599 as result  from lineitem
+ 
+select avg(l_tax *  -607) as result  from lineitem where l_tax in (-1293, -462, -6012, -645, -8632, -2254, -8867, -2230, -2721, -503, -208, -7928)
+ 
+select lineitem.l_tax *  -650 as result  from lineitem inner join customer on (lineitem.l_tax *  -699) = (customer.c_acctbal *  -272)
+ 
+select lineitem.l_tax *  -292 as result , customer.c_acctbal * lineitem.l_tax as result2  from lineitem inner join customer on (lineitem.l_tax *  -553) = (customer.c_acctbal *  -384)
+ 
+select lineitem.l_tax where lineitem.l_tax * -9484 between (-1293, -462, -6012, -645, -8632, -2254, -8867, -2230, -2721, -503, -208, -7928)
+ 
+select lineitem.l_tax *  -184 as result  from lineitem left outer join customer on (lineitem.l_tax *  -148) = (customer.c_acctbal *  -681)
+ 
+select lineitem.l_tax *  -691 as result  from lineitem left outer join customer on (lineitem.l_tax *  -179) = (customer.c_acctbal * customer.c_acctbal *  -59)
+ 
+select l_returnflag from lineitem where l_returnflag between l_linestatus and l_shipmode 
+ 
+select l_linestatus from lineitem where l_linestatus between l_returnflag and l_shipmode 
+ 
+select l_shipdate from lineitem where l_shipdate between 1985-04-13 14:40:55 and 2004-06-19 01:49:54 
+ 
+select l_shipdate from lineitem where l_shipdate between l_commitdate and l_receiptdate 
+ 
+select l_commitdate from lineitem where l_commitdate between 1980-12-27 08:22:22 and 1998-02-22 22:31:54 
+ 
+select l_commitdate from lineitem where l_commitdate between l_receiptdate and l_receiptdate 
+ 
+select l_receiptdate from lineitem where l_receiptdate between 2001-07-08 10:20:57 and 1993-10-08 01:40:28 
+ 
+select l_receiptdate from lineitem where l_receiptdate between l_shipdate and l_commitdate 
+ 
+select l_shipinstruct from lineitem where l_shipinstruct between l_shipinstruct and l_comment 
+ 
+select l_shipmode from lineitem where l_shipmode between l_linestatus and l_shipmode 
+ 
+select l_comment from lineitem where l_comment between l_shipmode and l_returnflag 
+ 
+select n_nationkey *  -606 as result  from nation
+ 
+select avg(n_nationkey *  -23) as result  from nation where n_nationkey in (-6810, -6034, -1464, -2170, -8322, -3385, -3472, -6009, -3431, -3439, -1376, -4045, -3248, -328, -7655, -5198, -5949)
+ 
+select nation.n_nationkey *  -632 as result  from nation inner join region on (nation.n_nationkey *  -572) = (region.r_regionkey *  -111)
+ 
+select nation.n_nationkey *  -559 as result , region.r_regionkey * nation.n_nationkey as result2  from nation inner join region on (nation.n_nationkey *  -345) = (region.r_regionkey *  -609)
+ 
+select nation.n_nationkey where nation.n_nationkey * -688 between (-6810, -6034, -1464, -2170, -8322, -3385, -3472, -6009, -3431, -3439, -1376, -4045, -3248, -328, -7655, -5198, -5949)
+ 
+select nation.n_nationkey *  -415 as result  from nation left outer join region on (nation.n_nationkey *  -505) = (region.r_regionkey *  -251)
+ 
+select nation.n_nationkey *  -690 as result  from nation left outer join region on (nation.n_nationkey *  -70) = (region.r_regionkey * region.r_regionkey *  -664)
+ 
+select n_name from nation where n_name between n_comment and n_comment 
+ 
+select n_regionkey *  -606 as result  from nation
+ 
+select avg(n_regionkey *  -308) as result  from nation where n_regionkey in (-1763, -3495, -7762, -3493, -4864, -6834, -3687, -4514, -8612, -2867)
+ 
+select nation.n_regionkey *  -576 as result  from nation inner join orders on (nation.n_regionkey *  -106) = (orders.o_orderkey *  -140)
+ 
+select nation.n_regionkey *  -594 as result , orders.o_orderkey * nation.n_regionkey as result2  from nation inner join orders on (nation.n_regionkey *  -404) = (orders.o_orderkey *  -356)
+ 
+select nation.n_regionkey where nation.n_regionkey * -2500 between (-1763, -3495, -7762, -3493, -4864, -6834, -3687, -4514, -8612, -2867)
+ 
+select nation.n_regionkey *  -95 as result  from nation left outer join orders on (nation.n_regionkey *  -372) = (orders.o_orderkey *  -176)
+ 
+select nation.n_regionkey *  -203 as result  from nation left outer join orders on (nation.n_regionkey *  -308) = (orders.o_orderkey * orders.o_shippriority *  -356)
+ 
+select n_comment from nation where n_comment between n_comment and n_name 
+ 
+select o_orderkey *  -283 as result  from orders
+ 
+select avg(o_orderkey *  -360) as result  from orders where o_orderkey in (-2878, -8042, -2473, -7949, -6150, -6429, -104, -5668, -8099, -2462)
+ 
+select orders.o_orderkey *  -315 as result  from orders inner join lineitem on (orders.o_orderkey *  -359) = (lineitem.l_suppkey *  -678)
+ 
+select orders.o_orderkey *  -629 as result , lineitem.l_suppkey * orders.o_orderkey as result2  from orders inner join lineitem on (orders.o_orderkey *  -596) = (lineitem.l_suppkey *  -263)
+ 
+select orders.o_orderkey where orders.o_orderkey * -331 between (-2878, -8042, -2473, -7949, -6150, -6429, -104, -5668, -8099, -2462)
+ 
+select orders.o_orderkey *  -544 as result  from orders left outer join lineitem on (orders.o_orderkey *  -371) = (lineitem.l_suppkey *  -438)
+ 
+select orders.o_orderkey *  -76 as result  from orders left outer join lineitem on (orders.o_orderkey *  -222) = (lineitem.l_suppkey * lineitem.l_orderkey *  -617)
+ 
+select o_custkey *  -263 as result  from orders
+ 
+select avg(o_custkey *  -89) as result  from orders where o_custkey in (-1819, -2892, -3252, -1754, -549, -4876, -6938, -2883, -4581, -7406, -2562, -8446, -6230, -3436, -5804, -4301, -8302, -8287)
+ 
+select orders.o_custkey *  -695 as result  from orders inner join supplier on (orders.o_custkey *  -315) = (supplier.s_nationkey *  -467)
+ 
+select orders.o_custkey *  -308 as result , supplier.s_nationkey * orders.o_custkey as result2  from orders inner join supplier on (orders.o_custkey *  -115) = (supplier.s_nationkey *  -304)
+ 
+select orders.o_custkey where orders.o_custkey * -5389 between (-1819, -2892, -3252, -1754, -549, -4876, -6938, -2883, -4581, -7406, -2562, -8446, -6230, -3436, -5804, -4301, -8302, -8287)
+ 
+select orders.o_custkey *  -331 as result  from orders left outer join supplier on (orders.o_custkey *  -333) = (supplier.s_nationkey *  -35)
+ 
+select orders.o_custkey *  -116 as result  from orders left outer join supplier on (orders.o_custkey *  -296) = (supplier.s_nationkey * supplier.s_nationkey *  -589)
+ 
+select o_orderstatus from orders where o_orderstatus between o_orderstatus and o_orderstatus 
+ 
+select o_totalprice *  -397 as result  from orders
+ 
+select avg(o_totalprice *  -402) as result  from orders where o_totalprice in (-6589, -3420, -7371, -8505, -170, -5939, -4968, -2382, -2220, -5670, -3352, -4420, -8475, -6136, -3117, -2840, -5056, -4097, -4732, -3155)
+ 
+select o_orderdate from orders where o_orderdate between 1984-06-13 17:38:12 and 1983-11-17 19:08:17 
+ 
+select o_orderdate from orders where o_orderdate between o_orderdate and o_orderdate 
+ 
+select o_orderpriority from orders where o_orderpriority between o_orderstatus and o_clerk 
+ 
+select o_clerk from orders where o_clerk between o_orderstatus and o_orderstatus 
+ 
+select o_shippriority *  -73 as result  from orders
+ 
+select orders.o_shippriority *  -582 as result  from orders inner join region on (orders.o_shippriority *  -241) = (region.r_regionkey *  -596)
+ 
+select orders.o_shippriority *  -466 as result , region.r_regionkey * orders.o_shippriority as result2  from orders inner join region on (orders.o_shippriority *  -666) = (region.r_regionkey *  -459)
+ 
+select orders.o_shippriority where orders.o_shippriority * -2163 between ()
+ 
+select orders.o_shippriority *  -210 as result  from orders left outer join region on (orders.o_shippriority *  -587) = (region.r_regionkey *  -41)
+ 
+select orders.o_shippriority *  -322 as result  from orders left outer join region on (orders.o_shippriority *  -141) = (region.r_regionkey * region.r_regionkey *  -455)
+ 
+select o_comment from orders where o_comment between o_orderpriority and o_orderpriority 
+ 
+select p_partkey *  -417 as result  from part
+ 
+select avg(p_partkey *  -492) as result  from part where p_partkey in (-7532, -5806, -2995, -6562, -3343, -2162, -8931, -4439, -8083, -6537, -5199)
+ 
+select part.p_partkey *  -311 as result  from part inner join part on (part.p_partkey *  -590) = (part.p_size *  -628)
+ 
+select part.p_partkey *  -186 as result , part.p_size * part.p_partkey as result2  from part inner join part on (part.p_partkey *  -416) = (part.p_size *  -356)
+ 
+select part.p_partkey where part.p_partkey * -793 between (-7532, -5806, -2995, -6562, -3343, -2162, -8931, -4439, -8083, -6537, -5199)
+ 
+select part.p_partkey *  -604 as result  from part left outer join part on (part.p_partkey *  -222) = (part.p_size *  -204)
+ 
+select part.p_partkey *  -211 as result  from part left outer join part on (part.p_partkey *  -511) = (part.p_size * part.p_size *  -356)
+ 
+select p_name from part where p_name between p_comment and p_brand 
+ 
+select p_mfgr from part where p_mfgr between p_comment and p_mfgr 
+ 
+select p_brand from part where p_brand between p_container and p_name 
+ 
+select p_type from part where p_type between p_name and p_comment 
+ 
+select p_size *  -161 as result  from part
+ 
+select avg(p_size *  -414) as result  from part where p_size in (-4592, -8145, -3666, -1264, -6066, -8581, -8073, -8038, -3704, -3764, -8948, -7391, -2149, -505, -2851, -4082, -2361, -5295)
+ 
+select part.p_size *  -85 as result  from part inner join partsupp on (part.p_size *  -600) = (partsupp.ps_partkey *  -185)
+ 
+select part.p_size *  -436 as result , partsupp.ps_partkey * part.p_size as result2  from part inner join partsupp on (part.p_size *  -578) = (partsupp.ps_partkey *  -238)
+ 
+select part.p_size where part.p_size * -5699 between (-4592, -8145, -3666, -1264, -6066, -8581, -8073, -8038, -3704, -3764, -8948, -7391, -2149, -505, -2851, -4082, -2361, -5295)
+ 
+select part.p_size *  -89 as result  from part left outer join partsupp on (part.p_size *  -68) = (partsupp.ps_partkey *  -466)
+ 
+select part.p_size *  -521 as result  from part left outer join partsupp on (part.p_size *  -676) = (partsupp.ps_partkey * partsupp.ps_partkey *  -530)
+ 
+select p_container from part where p_container between p_name and p_container 
+ 
+select p_retailprice *  -682 as result  from part
+ 
+select part.p_retailprice *  -635 as result  from part inner join partsupp on (part.p_retailprice *  -445) = (partsupp.ps_supplycost *  -287)
+ 
+select part.p_retailprice *  -419 as result , partsupp.ps_supplycost * part.p_retailprice as result2  from part inner join partsupp on (part.p_retailprice *  -433) = (partsupp.ps_supplycost *  -531)
+ 
+select part.p_retailprice where part.p_retailprice * -8776 between ()
+ 
+select part.p_retailprice *  -330 as result  from part left outer join partsupp on (part.p_retailprice *  -420) = (partsupp.ps_supplycost *  -618)
+ 
+select part.p_retailprice *  -660 as result  from part left outer join partsupp on (part.p_retailprice *  -266) = (partsupp.ps_supplycost * partsupp.ps_supplycost *  -571)
+ 
+select p_comment from part where p_comment between p_name and p_brand 
+ 
+select ps_partkey *  -418 as result  from partsupp
+ 
+select avg(ps_partkey *  -641) as result  from partsupp where ps_partkey in (-5635, -1136, -4419, -5574, -2100, -2073, -3150, -2705, -2075, -287, -4689, -4846, -3686, -1748, -2042)
+ 
+select partsupp.ps_partkey *  -183 as result  from partsupp inner join nation on (partsupp.ps_partkey *  -609) = (nation.n_nationkey *  -400)
+ 
+select partsupp.ps_partkey *  -691 as result , nation.n_nationkey * partsupp.ps_partkey as result2  from partsupp inner join nation on (partsupp.ps_partkey *  -650) = (nation.n_nationkey *  -638)
+ 
+select partsupp.ps_partkey where partsupp.ps_partkey * -2771 between (-5635, -1136, -4419, -5574, -2100, -2073, -3150, -2705, -2075, -287, -4689, -4846, -3686, -1748, -2042)
+ 
+select partsupp.ps_partkey *  -597 as result  from partsupp left outer join nation on (partsupp.ps_partkey *  -118) = (nation.n_nationkey *  -81)
+ 
+select partsupp.ps_partkey *  -272 as result  from partsupp left outer join nation on (partsupp.ps_partkey *  -342) = (nation.n_nationkey * nation.n_nationkey *  -126)
+ 
+select ps_suppkey *  -169 as result  from partsupp
+ 
+select avg(ps_suppkey *  -632) as result  from partsupp where ps_suppkey in (-4039, -6668, -5152, -5046, -8704)
+ 
+select partsupp.ps_suppkey *  -8 as result  from partsupp inner join part on (partsupp.ps_suppkey *  -114) = (part.p_size *  -123)
+ 
+select partsupp.ps_suppkey *  -48 as result , part.p_size * partsupp.ps_suppkey as result2  from partsupp inner join part on (partsupp.ps_suppkey *  -116) = (part.p_size *  -65)
+ 
+select partsupp.ps_suppkey where partsupp.ps_suppkey * -3934 between (-4039, -6668, -5152, -5046, -8704)
+ 
+select partsupp.ps_suppkey *  -507 as result  from partsupp left outer join part on (partsupp.ps_suppkey *  -669) = (part.p_size *  -561)
+ 
+select partsupp.ps_suppkey *  -70 as result  from partsupp left outer join part on (partsupp.ps_suppkey *  -120) = (part.p_size * part.p_size *  -588)
+ 
+select ps_availqty *  -295 as result  from partsupp
+ 
+select avg(ps_availqty *  -550) as result  from partsupp where ps_availqty in (-2925, -6834, -7979)
+ 
+select partsupp.ps_availqty *  -213 as result  from partsupp inner join nation on (partsupp.ps_availqty *  -476) = (nation.n_regionkey *  -697)
+ 
+select partsupp.ps_availqty *  -432 as result , nation.n_regionkey * partsupp.ps_availqty as result2  from partsupp inner join nation on (partsupp.ps_availqty *  -202) = (nation.n_regionkey *  -298)
+ 
+select partsupp.ps_availqty where partsupp.ps_availqty * -3535 between (-2925, -6834, -7979)
+ 
+select partsupp.ps_availqty *  -123 as result  from partsupp left outer join nation on (partsupp.ps_availqty *  -523) = (nation.n_regionkey *  -428)
+ 
+select partsupp.ps_availqty *  -618 as result  from partsupp left outer join nation on (partsupp.ps_availqty *  -36) = (nation.n_regionkey * nation.n_regionkey *  -19)
+ 
+select ps_supplycost *  -535 as result  from partsupp
+ 
+select avg(ps_supplycost *  -388) as result  from partsupp where ps_supplycost in (-6840, -7670, -2912, -6901, -6827, -6013, -2359, -5216, -410, -6204, -1289, -3388, -7331, -3762, -1771, -4656, -6143, -2676, -7089, -6839)
+ 
+select partsupp.ps_supplycost *  -588 as result  from partsupp inner join orders on (partsupp.ps_supplycost *  -578) = (orders.o_totalprice *  -124)
+ 
+select partsupp.ps_supplycost *  -303 as result , orders.o_totalprice * partsupp.ps_supplycost as result2  from partsupp inner join orders on (partsupp.ps_supplycost *  -70) = (orders.o_totalprice *  -274)
+ 
+select partsupp.ps_supplycost where partsupp.ps_supplycost * -4946 between (-6840, -7670, -2912, -6901, -6827, -6013, -2359, -5216, -410, -6204, -1289, -3388, -7331, -3762, -1771, -4656, -6143, -2676, -7089, -6839)
+ 
+select partsupp.ps_supplycost *  -447 as result  from partsupp left outer join orders on (partsupp.ps_supplycost *  -64) = (orders.o_totalprice *  -571)
+ 
+select partsupp.ps_supplycost *  -187 as result  from partsupp left outer join orders on (partsupp.ps_supplycost *  -289) = (orders.o_totalprice * orders.o_totalprice *  -198)
+ 
+select ps_comment from partsupp where ps_comment between ps_comment and ps_comment 
+ 
+select r_regionkey *  -36 as result  from region
+ 
+select region.r_regionkey *  -155 as result  from region inner join nation on (region.r_regionkey *  -355) = (nation.n_regionkey *  -223)
+ 
+select region.r_regionkey *  -462 as result , nation.n_regionkey * region.r_regionkey as result2  from region inner join nation on (region.r_regionkey *  -121) = (nation.n_regionkey *  -129)
+ 
+select region.r_regionkey where region.r_regionkey * -7125 between ()
+ 
+select region.r_regionkey *  -430 as result  from region left outer join nation on (region.r_regionkey *  -404) = (nation.n_regionkey *  -23)
+ 
+select region.r_regionkey *  -473 as result  from region left outer join nation on (region.r_regionkey *  -467) = (nation.n_regionkey * nation.n_nationkey *  -332)
+ 
+select r_name from region where r_name between r_name and r_name 
+ 
+select r_comment from region where r_comment between r_name and r_comment 
+ 
+select s_suppkey *  -651 as result  from supplier
+ 
+select avg(s_suppkey *  -454) as result  from supplier where s_suppkey in (-7965, -8508, -4385, -3601, -5741, -4990)
+ 
+select supplier.s_suppkey *  -341 as result  from supplier inner join supplier on (supplier.s_suppkey *  -367) = (supplier.s_nationkey *  -354)
+ 
+select supplier.s_suppkey *  -361 as result , supplier.s_nationkey * supplier.s_suppkey as result2  from supplier inner join supplier on (supplier.s_suppkey *  -202) = (supplier.s_nationkey *  -194)
+ 
+select supplier.s_suppkey where supplier.s_suppkey * -5843 between (-7965, -8508, -4385, -3601, -5741, -4990)
+ 
+select supplier.s_suppkey *  -542 as result  from supplier left outer join supplier on (supplier.s_suppkey *  -699) = (supplier.s_nationkey *  -290)
+ 
+select supplier.s_suppkey *  -273 as result  from supplier left outer join supplier on (supplier.s_suppkey *  -354) = (supplier.s_nationkey * supplier.s_suppkey *  -679)
+ 
+select s_name from supplier where s_name between s_comment and s_address 
+ 
+select s_address from supplier where s_address between s_phone and s_address 
+ 
+select s_nationkey *  -512 as result  from supplier
+ 
+select supplier.s_nationkey *  -66 as result  from supplier inner join part on (supplier.s_nationkey *  -419) = (part.p_size *  -368)
+ 
+select supplier.s_nationkey *  -478 as result , part.p_size * supplier.s_nationkey as result2  from supplier inner join part on (supplier.s_nationkey *  -389) = (part.p_size *  -541)
+ 
+select supplier.s_nationkey where supplier.s_nationkey * -924 between ()
+ 
+select supplier.s_nationkey *  -417 as result  from supplier left outer join part on (supplier.s_nationkey *  -541) = (part.p_size *  -23)
+ 
+select supplier.s_nationkey *  -465 as result  from supplier left outer join part on (supplier.s_nationkey *  -560) = (part.p_size * part.p_size *  -252)
+ 
+select s_phone from supplier where s_phone between s_phone and s_address 
+ 
+select s_acctbal *  -584 as result  from supplier
+ 
+select avg(s_acctbal *  -556) as result  from supplier where s_acctbal in (-3269, -5594, -7858, -4520, -4687, -3176, -5104, -2128, -6148, -5489, -8164, -8783, -8324, -3205, -2873)
+ 
+select supplier.s_acctbal *  -628 as result  from supplier inner join orders on (supplier.s_acctbal *  -183) = (orders.o_totalprice *  -93)
+ 
+select supplier.s_acctbal *  -134 as result , orders.o_totalprice * supplier.s_acctbal as result2  from supplier inner join orders on (supplier.s_acctbal *  -162) = (orders.o_totalprice *  -355)
+ 
+select supplier.s_acctbal where supplier.s_acctbal * -420 between (-3269, -5594, -7858, -4520, -4687, -3176, -5104, -2128, -6148, -5489, -8164, -8783, -8324, -3205, -2873)
+ 
+select supplier.s_acctbal *  -536 as result  from supplier left outer join orders on (supplier.s_acctbal *  -634) = (orders.o_totalprice *  -221)
+ 
+select supplier.s_acctbal *  -547 as result  from supplier left outer join orders on (supplier.s_acctbal *  -427) = (orders.o_totalprice * orders.o_totalprice *  -540)
+ 
+select s_comment from supplier where s_comment between s_phone and s_address 
+ 
+select c_custkey *  -43 as result  from customer
+ 
+select avg(c_custkey *  -411) as result  from customer where c_custkey in (-8560, -4242, -8419, -5595, -1282, -5563, -8720, -7777, -7326, -4466, -4123, -6739, -4772, -5703, -2050)
+ 
+select customer.c_custkey *  -315 as result  from customer inner join region on (customer.c_custkey *  -690) = (region.r_regionkey *  -598)
+ 
+select customer.c_custkey *  -570 as result , region.r_regionkey * customer.c_custkey as result2  from customer inner join region on (customer.c_custkey *  -556) = (region.r_regionkey *  -106)
+ 
+select customer.c_custkey where customer.c_custkey * -5969 between (-8560, -4242, -8419, -5595, -1282, -5563, -8720, -7777, -7326, -4466, -4123, -6739, -4772, -5703, -2050)
+ 
+select customer.c_custkey *  -299 as result  from customer left outer join region on (customer.c_custkey *  -536) = (region.r_regionkey *  -502)
+ 
+select customer.c_custkey *  -284 as result  from customer left outer join region on (customer.c_custkey *  -610) = (region.r_regionkey * region.r_regionkey *  -595)
+ 
+select c_name from customer where c_name between c_address and c_comment 
+ 
+select c_address from customer where c_address between c_mktsegment and c_name 
+ 
+select c_nationkey *  -329 as result  from customer
+ 
+select avg(c_nationkey *  -202) as result  from customer where c_nationkey in (-4786)
+ 
+select customer.c_nationkey *  -479 as result  from customer inner join partsupp on (customer.c_nationkey *  -150) = (partsupp.ps_availqty *  -351)
+ 
+select customer.c_nationkey *  -446 as result , partsupp.ps_availqty * customer.c_nationkey as result2  from customer inner join partsupp on (customer.c_nationkey *  -487) = (partsupp.ps_availqty *  -93)
+ 
+select customer.c_nationkey where customer.c_nationkey * -7257 between (-4786)
+ 
+select customer.c_nationkey *  -216 as result  from customer left outer join partsupp on (customer.c_nationkey *  -392) = (partsupp.ps_availqty *  -458)
+ 
+select customer.c_nationkey *  -149 as result  from customer left outer join partsupp on (customer.c_nationkey *  -355) = (partsupp.ps_availqty * partsupp.ps_partkey *  -289)
+ 
+select c_phone from customer where c_phone between c_address and c_name 
+ 
+select c_acctbal *  -361 as result  from customer
+ 
+select avg(c_acctbal *  -16) as result  from customer where c_acctbal in (-4954, -1171, -6229, -6895, -2252, -6277, -6011, -8548, -8522, -515, -7113)
+ 
+select customer.c_acctbal *  -258 as result  from customer inner join partsupp on (customer.c_acctbal *  -689) = (partsupp.ps_supplycost *  -308)
+ 
+select customer.c_acctbal *  -223 as result , partsupp.ps_supplycost * customer.c_acctbal as result2  from customer inner join partsupp on (customer.c_acctbal *  -19) = (partsupp.ps_supplycost *  -110)
+ 
+select customer.c_acctbal where customer.c_acctbal * -7677 between (-4954, -1171, -6229, -6895, -2252, -6277, -6011, -8548, -8522, -515, -7113)
+ 
+select customer.c_acctbal *  -144 as result  from customer left outer join partsupp on (customer.c_acctbal *  -510) = (partsupp.ps_supplycost *  -455)
+ 
+select customer.c_acctbal *  -494 as result  from customer left outer join partsupp on (customer.c_acctbal *  -432) = (partsupp.ps_supplycost * partsupp.ps_supplycost *  -425)
+ 
+select c_mktsegment from customer where c_mktsegment between c_address and c_address 
+ 
+select c_comment from customer where c_comment between c_address and c_comment 
+ 
+select l_orderkey *  -133 as result  from lineitem
+ 
+select avg(l_orderkey *  -595) as result  from lineitem where l_orderkey in (-7684, -5583, -2744, -5442, -8622, -4129, -951, -4460, -6610, -8926, -3157, -378, -5330, -495, -1194, -5579, -7364, -8558)
+ 
+select lineitem.l_orderkey *  -17 as result  from lineitem inner join nation on (lineitem.l_orderkey *  -295) = (nation.n_nationkey *  -245)
+ 
+select lineitem.l_orderkey *  -71 as result , nation.n_nationkey * lineitem.l_orderkey as result2  from lineitem inner join nation on (lineitem.l_orderkey *  -389) = (nation.n_nationkey *  -644)
+ 
+select lineitem.l_orderkey where lineitem.l_orderkey * -2322 between (-7684, -5583, -2744, -5442, -8622, -4129, -951, -4460, -6610, -8926, -3157, -378, -5330, -495, -1194, -5579, -7364, -8558)
+ 
+select lineitem.l_orderkey *  -492 as result  from lineitem left outer join nation on (lineitem.l_orderkey *  -355) = (nation.n_nationkey *  -691)
+ 
+select lineitem.l_orderkey *  -684 as result  from lineitem left outer join nation on (lineitem.l_orderkey *  -596) = (nation.n_nationkey * nation.n_regionkey *  -58)
+ 
+select l_partkey *  -224 as result  from lineitem
+ 
+select avg(l_partkey *  -358) as result  from lineitem where l_partkey in (-6906, -3247, -1898, -6409, -7831, -3451, -4177, -2695, -5163)
+ 
+select lineitem.l_partkey *  -244 as result  from lineitem inner join supplier on (lineitem.l_partkey *  -227) = (supplier.s_nationkey *  -87)
+ 
+select lineitem.l_partkey *  -642 as result , supplier.s_nationkey * lineitem.l_partkey as result2  from lineitem inner join supplier on (lineitem.l_partkey *  -261) = (supplier.s_nationkey *  -217)
+ 
+select lineitem.l_partkey where lineitem.l_partkey * -5655 between (-6906, -3247, -1898, -6409, -7831, -3451, -4177, -2695, -5163)
+ 
+select lineitem.l_partkey *  -256 as result  from lineitem left outer join supplier on (lineitem.l_partkey *  -1) = (supplier.s_nationkey *  -8)
+ 
+select lineitem.l_partkey *  -0 as result  from lineitem left outer join supplier on (lineitem.l_partkey *  -155) = (supplier.s_nationkey * supplier.s_nationkey *  -209)
+ 
+select l_suppkey *  -454 as result  from lineitem
+ 
+select avg(l_suppkey *  -191) as result  from lineitem where l_suppkey in (-6368, -4202, -8422, -6711, -6337, -8611, -2665, -8064, -6738, -5143, -8194, -5221, -8273, -2635, -4313, -6269, -2664)
+ 
+select lineitem.l_suppkey *  -501 as result  from lineitem inner join region on (lineitem.l_suppkey *  -70) = (region.r_regionkey *  -75)
+ 
+select lineitem.l_suppkey *  -86 as result , region.r_regionkey * lineitem.l_suppkey as result2  from lineitem inner join region on (lineitem.l_suppkey *  -510) = (region.r_regionkey *  -435)
+ 
+select lineitem.l_suppkey where lineitem.l_suppkey * -6751 between (-6368, -4202, -8422, -6711, -6337, -8611, -2665, -8064, -6738, -5143, -8194, -5221, -8273, -2635, -4313, -6269, -2664)
+ 
+select lineitem.l_suppkey *  -316 as result  from lineitem left outer join region on (lineitem.l_suppkey *  -309) = (region.r_regionkey *  -119)
+ 
+select lineitem.l_suppkey *  -644 as result  from lineitem left outer join region on (lineitem.l_suppkey *  -103) = (region.r_regionkey * region.r_regionkey *  -420)
+ 
+select l_linenumber *  -357 as result  from lineitem
+ 
+select avg(l_linenumber *  -321) as result  from lineitem where l_linenumber in (-3757, -4274, -8446, -619, -5737, -394, -4900, -6497)
+ 
+select lineitem.l_linenumber *  -69 as result  from lineitem inner join orders on (lineitem.l_linenumber *  -256) = (orders.o_custkey *  -661)
+ 
+select lineitem.l_linenumber *  -546 as result , orders.o_custkey * lineitem.l_linenumber as result2  from lineitem inner join orders on (lineitem.l_linenumber *  -554) = (orders.o_custkey *  -371)
+ 
+select lineitem.l_linenumber where lineitem.l_linenumber * -6025 between (-3757, -4274, -8446, -619, -5737, -394, -4900, -6497)
+ 
+select lineitem.l_linenumber *  -26 as result  from lineitem left outer join orders on (lineitem.l_linenumber *  -8) = (orders.o_custkey *  -462)
+ 
+select lineitem.l_linenumber *  -270 as result  from lineitem left outer join orders on (lineitem.l_linenumber *  -56) = (orders.o_custkey * orders.o_shippriority *  -510)
+ 
+select l_quantity *  -344 as result  from lineitem
+ 
+select avg(l_quantity *  -47) as result  from lineitem where l_quantity in (-107, -2253, -2405, -1897, -1435, -6843, -8785, -4385)
+ 
+select lineitem.l_quantity *  -317 as result  from lineitem inner join lineitem on (lineitem.l_quantity *  -564) = (lineitem.l_discount *  -135)
+ 
+select lineitem.l_quantity *  -408 as result , lineitem.l_discount * lineitem.l_quantity as result2  from lineitem inner join lineitem on (lineitem.l_quantity *  -447) = (lineitem.l_discount *  -28)
+ 
+select lineitem.l_quantity where lineitem.l_quantity * -3885 between (-107, -2253, -2405, -1897, -1435, -6843, -8785, -4385)
+ 
+select lineitem.l_quantity *  -474 as result  from lineitem left outer join lineitem on (lineitem.l_quantity *  -320) = (lineitem.l_discount *  -593)
+ 
+select lineitem.l_quantity *  -268 as result  from lineitem left outer join lineitem on (lineitem.l_quantity *  -634) = (lineitem.l_discount * lineitem.l_quantity *  -133)
+ 
+select l_extendedprice *  -555 as result  from lineitem
+ 
+select avg(l_extendedprice *  -346) as result  from lineitem where l_extendedprice in (-8067, -631, -2339, -5809, -530, -3846)
+ 
+select l_discount *  -695 as result  from lineitem
+ 
+select lineitem.l_discount *  -518 as result  from lineitem inner join customer on (lineitem.l_discount *  -195) = (customer.c_acctbal *  -373)
+ 
+select lineitem.l_discount *  -183 as result , customer.c_acctbal * lineitem.l_discount as result2  from lineitem inner join customer on (lineitem.l_discount *  -152) = (customer.c_acctbal *  -511)
+ 
+select lineitem.l_discount where lineitem.l_discount * -5149 between ()
+ 
+select lineitem.l_discount *  -654 as result  from lineitem left outer join customer on (lineitem.l_discount *  -173) = (customer.c_acctbal *  -121)
+ 
+select lineitem.l_discount *  -470 as result  from lineitem left outer join customer on (lineitem.l_discount *  -694) = (customer.c_acctbal * customer.c_acctbal *  -21)
+ 
+select l_tax *  -10 as result  from lineitem
+ 
+select avg(l_tax *  -108) as result  from lineitem where l_tax in (-3608, -940, -7231, -7455, -5273, -4658, -486, -7559, -1542, -1470, -147)
+ 
+select lineitem.l_tax *  -294 as result  from lineitem inner join customer on (lineitem.l_tax *  -532) = (customer.c_acctbal *  -541)
+ 
+select lineitem.l_tax *  -189 as result , customer.c_acctbal * lineitem.l_tax as result2  from lineitem inner join customer on (lineitem.l_tax *  -373) = (customer.c_acctbal *  -683)
+ 
+select lineitem.l_tax where lineitem.l_tax * -3626 between (-3608, -940, -7231, -7455, -5273, -4658, -486, -7559, -1542, -1470, -147)
+ 
+select lineitem.l_tax *  -147 as result  from lineitem left outer join customer on (lineitem.l_tax *  -554) = (customer.c_acctbal *  -335)
+ 
+select lineitem.l_tax *  -333 as result  from lineitem left outer join customer on (lineitem.l_tax *  -250) = (customer.c_acctbal * customer.c_acctbal *  -663)
+ 
+select l_returnflag from lineitem where l_returnflag between l_returnflag and l_shipmode 
+ 
+select l_linestatus from lineitem where l_linestatus between l_linestatus and l_comment 
+ 
+select l_shipdate from lineitem where l_shipdate between 2003-03-27 14:35:32 and 2013-01-05 01:55:46 
+ 
+select l_shipdate from lineitem where l_shipdate between l_receiptdate and l_receiptdate 
+ 
+select l_commitdate from lineitem where l_commitdate between 1990-10-18 22:17:01 and 1996-07-22 02:22:40 
+ 
+select l_commitdate from lineitem where l_commitdate between l_shipdate and l_commitdate 
+ 
+select l_receiptdate from lineitem where l_receiptdate between 2015-02-17 12:25:45 and 1981-07-29 16:43:33 
+ 
+select l_receiptdate from lineitem where l_receiptdate between l_shipdate and l_receiptdate 
+ 
+select l_shipinstruct from lineitem where l_shipinstruct between l_linestatus and l_shipinstruct 
+ 
+select l_shipmode from lineitem where l_shipmode between l_shipinstruct and l_comment 
+ 
+select l_comment from lineitem where l_comment between l_shipmode and l_shipinstruct 
+ 
+select n_nationkey *  -159 as result  from nation
+ 
+select avg(n_nationkey *  -561) as result  from nation where n_nationkey in (-3195, -2788, -2528, -4553)
+ 
+select nation.n_nationkey *  -381 as result  from nation inner join nation on (nation.n_nationkey *  -137) = (nation.n_regionkey *  -84)
+ 
+select nation.n_nationkey *  -661 as result , nation.n_regionkey * nation.n_nationkey as result2  from nation inner join nation on (nation.n_nationkey *  -317) = (nation.n_regionkey *  -369)
+ 
+select nation.n_nationkey where nation.n_nationkey * -7768 between (-3195, -2788, -2528, -4553)
+ 
+select nation.n_nationkey *  -579 as result  from nation left outer join nation on (nation.n_nationkey *  -418) = (nation.n_regionkey *  -28)
+ 
+select nation.n_nationkey *  -296 as result  from nation left outer join nation on (nation.n_nationkey *  -279) = (nation.n_regionkey * nation.n_regionkey *  -577)
+ 
+select n_name from nation where n_name between n_name and n_comment 
+ 
+select n_regionkey *  -181 as result  from nation
+ 
+select avg(n_regionkey *  -72) as result  from nation where n_regionkey in (-3556, -7943, -1823, -4262, -873, -6062, -5932, -2973, -8302, -5343, -6593, -3497, -5775, -8183, -3137, -7198)
+ 
+select nation.n_regionkey *  -283 as result  from nation inner join nation on (nation.n_regionkey *  -511) = (nation.n_nationkey *  -615)
+ 
+select nation.n_regionkey *  -466 as result , nation.n_nationkey * nation.n_regionkey as result2  from nation inner join nation on (nation.n_regionkey *  -320) = (nation.n_nationkey *  -152)
+ 
+select nation.n_regionkey where nation.n_regionkey * -3274 between (-3556, -7943, -1823, -4262, -873, -6062, -5932, -2973, -8302, -5343, -6593, -3497, -5775, -8183, -3137, -7198)
+ 
+select nation.n_regionkey *  -77 as result  from nation left outer join nation on (nation.n_regionkey *  -19) = (nation.n_nationkey *  -232)
+ 
+select nation.n_regionkey *  -383 as result  from nation left outer join nation on (nation.n_regionkey *  -318) = (nation.n_nationkey * nation.n_regionkey *  -650)
+ 
+select n_comment from nation where n_comment between n_name and n_comment 
+ 
+select o_orderkey *  -100 as result  from orders
+ 
+select avg(o_orderkey *  -82) as result  from orders where o_orderkey in (-6665, -3456, -6240, -5287, -4529, -1992, -4156, -3610, -2621)
+ 
+select orders.o_orderkey *  -407 as result  from orders inner join orders on (orders.o_orderkey *  -586) = (orders.o_shippriority *  -53)
+ 
+select orders.o_orderkey *  -91 as result , orders.o_shippriority * orders.o_orderkey as result2  from orders inner join orders on (orders.o_orderkey *  -398) = (orders.o_shippriority *  -620)
+ 
+select orders.o_orderkey where orders.o_orderkey * -4444 between (-6665, -3456, -6240, -5287, -4529, -1992, -4156, -3610, -2621)
+ 
+select orders.o_orderkey *  -672 as result  from orders left outer join orders on (orders.o_orderkey *  -619) = (orders.o_shippriority *  -543)
+ 
+select orders.o_orderkey *  -282 as result  from orders left outer join orders on (orders.o_orderkey *  -448) = (orders.o_shippriority * orders.o_custkey *  -89)
+ 
+select o_custkey *  -359 as result  from orders
+ 
+select avg(o_custkey *  -261) as result  from orders where o_custkey in (-3671, -4194, -3494, -5049, -6349, -1241, -3836)
+ 
+select orders.o_custkey *  -536 as result  from orders inner join supplier on (orders.o_custkey *  -74) = (supplier.s_nationkey *  -516)
+ 
+select orders.o_custkey *  -226 as result , supplier.s_nationkey * orders.o_custkey as result2  from orders inner join supplier on (orders.o_custkey *  -329) = (supplier.s_nationkey *  -393)
+ 
+select orders.o_custkey where orders.o_custkey * -5357 between (-3671, -4194, -3494, -5049, -6349, -1241, -3836)
+ 
+select orders.o_custkey *  -76 as result  from orders left outer join supplier on (orders.o_custkey *  -652) = (supplier.s_nationkey *  -439)
+ 
+select orders.o_custkey *  -551 as result  from orders left outer join supplier on (orders.o_custkey *  -665) = (supplier.s_nationkey * supplier.s_suppkey *  -572)
+ 
+select o_orderstatus from orders where o_orderstatus between o_orderpriority and o_comment 
+ 
+select o_totalprice *  -562 as result  from orders
+ 
+select avg(o_totalprice *  -209) as result  from orders where o_totalprice in (-5756, -5273, -2150, -2239, -7865, -3796, -6545, -7183, -8904, -8535, -3838, -2133)
+ 
+select o_orderdate from orders where o_orderdate between 2006-01-08 19:41:33 and 2014-09-29 03:33:52 
+ 
+select o_orderdate from orders where o_orderdate between o_orderdate and o_orderdate 
+ 

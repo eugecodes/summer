@@ -1,0 +1,48 @@
+Accruent
+
+Intriguing proposition
+
+What is the difference between what we do and what something like an elastic search?
+
+From a reporting perspective, much of their limitations
+
+Looking and evaluating platforms for reporting solutions. Looking for things from a BI perspective.
+
+Not terribly scalable or performant on their growing datasets.
+That is their biggest challenge today.
+
+What do they currently use?
+Microstrategy
+
+Combo of 2 problems:
+Query engines are super slow
+  optimizing their queries
+
+Limitation of architecture of Microstrategy
+
+Cost of the solution itself is prohibitive b/c it doesn't scale.
+
+
+They are resolving the query issues in house. They are looking for a new visualization platform.
+
+A more cost effective, and easier to manage reporting solution. Something that is easier to scale with.
+
+Looking for a solution that is database agnostic and able to scale out horizontally. Moving into
+a significant growth period.
+
+Going to need to be able to scale with and expand with their data needs. Internationally and domestically.
+
+Roughly 1PB. In 12-18 months should double or more based on current trends and growth expectations.
+
+Data Visualization Tools They're looking at:
+  Jaspersoft
+  Few others
+  Close to landing on a solution and just took a step back for a bit.
+
+Server architecture
+  Primary - Managed services solution
+  Building out a private cloud for some of the production set, and some of their QA Dev
+  QA in AWS
+  Some production in AWS
+  Some production in CoLocation
+  Trying 
