@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load analytical %}
+{% load humanize %}
+{% load account %}
+<html ng-app="eaUniversal" ng-controller="universalController">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}Export Abroad Frontend{% endblock %}</title>
+
+	<!-- Chartist -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+	<!-- <script src="{% static 'angular-apps/customers/angular-view-customer.js' %}"></script> -->
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/nav.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/typography.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/forms.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/nganimate.css' %}">
+
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="{% static 'app/scripts/vendor/angular.min.js' %}"></script>
+    <script src="{% static 'app/scripts/vendor/angular-route.min.js' %}"></script>
+    <script src="{% static 'app/scripts/vendor/angular-animate.min.js' %}"></script>
+    <script src="{% static 'app/scripts/custom/angular-universal.js' %}"></script>
+
+	<!-- Page Specific Styles -->
+	{% block page_styles %}
+	{% endblock %}
+
+	{% block extra_js %}
+	{% endblock %}
+
+
+
+</head>
+<body>
+
+	<div id="backdrop">
+	</div>
+
+	<div id="modal-backdrop" ng-hide="!showingModal" ng-class="{'transparent': showingAlert}" ng-click="closeModal()">
+	<!-- <div id="modal-backdrop" ng-hide="!showingModal && !showingAlert" class="ngFade"> -->
+		<h1 id="modal-title" ng-hide="!showingModal" class="ngFlyLeft" ng-click="$event.stopPropagation()">[[modalTitle]]</h1>
+		<div id="modal" ng-hide="!showingModal" class="ngFlyRight ngFlex" ng-click="$event.stopPropagation()">
+
+			<div  ng-include="modalBody"></div>
+
+		</div>
+	</div>
+
+	<div id="alert-backdrop" ng-hide="!showingAlert">
+		<div id="alert" ng-hide="!showingAlert" class="ngFlyRight">
+			<h1>[[alertTitle]]</h1>
+			<h2>[[alertBody]]</h2>
+			<!-- <div id="alert-confirm">
+
+			</div> -->
+			<div id="alert-dismiss">
+				<button class="btn btn-blue" ng-click="closeAlert()">Dismiss</button>
+			</div>
+		</div>
+	</div>
+
+
+	<header>
+
+		<h1 class="branding-name">
+			<i class="ion-navicon" id="mobile-menu"></i>
+			Export<b>Abroad</b>
+		</h1>
+
+		<nav id="webapp-nav">
+			<a href="/dashboard" target="_self">Dashboard</a>
+			<!-- <a href="#" target="_self">Insights</a> -->
+			<a href="/customers/" target="_self">Customers</a>
+			<!-- <a href="#" target="_self">Clients</a> -->
+		</nav>
+
+		<span class="user-nav">
+			<h1>Mitchas<b>Export Abroad</b></h1>
+			<!-- <button id="logout">Logout</button> -->
+			<a class="user-btn" href="/accounts/logout" target="_self"><i class="ion-log-out"></i></a>
+			<!-- <a href="#" class="user-btn"><i class="ion-android-settings"></i></a> -->
+		</span>
+
+
+	</header>
+
+
+	{% block body %}
+	{% endblock %}
+
+
+
+
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script>
+		$("#mobile-menu").click(function(){
+			hideAltNav();
+			if ( $("#webapp-nav").css('display') == 'none' ){
+				$("#webapp-nav").slideDown(200);
+				$("#mobile-menu").removeClass("ion-navicon").addClass("ion-ios-close-empty").addClass("showingMobile");
+				$("#backdrop").fadeIn();
+			}else{
+				$("#webapp-nav").slideUp(200);
+				$("#mobile-menu").addClass("ion-navicon").removeClass("ion-ios-close-empty").removeClass("showingMobile");
+				$("#backdrop").fadeOut();
+			}
+		});
+		$('#backdrop').click(function() {
+			hideMobile();
+			hideAltNav();
+			$("#backdrop").fadeOut();
+		});
+		function hideMobile(){
+			$("#webapp-nav").slideUp(200);
+			$("#mobile-menu").addClass("ion-navicon").removeClass("ion-ios-close-empty").removeClass("showingMobile");
+		}
+		function hideAltNav(){
+			$(".alt-nav").slideUp(200);
+			$("#fab").addClass("ion-ios-keypad").removeClass("ion-ios-close-empty").removeClass("showingMobile");
+		}
+
+
+		$("#fab").click(function(){
+			hideMobile();
+			if ( $(".alt-nav").css('display') == 'none' ){
+				$(".alt-nav").slideDown(200);
+				$("#fab").removeClass("ion-ios-keypad").addClass("ion-ios-close-empty").addClass("showingMobile");
+				$("#backdrop").fadeIn();
+			}else{
+				$(".alt-nav").slideUp(200);
+				$("#fab").addClass("ion-ios-keypad").removeClass("ion-ios-close-empty").removeClass("showingMobile");
+				$("#backdrop").fadeOut();
+			}
+		});
+
+
+
+		var resizeTimer;
+		$(window).on('resize', function(e) {
+
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function() {
+				//Code runs here once resizing has stopped
+			    if ( $("#mobile-menu").css('display') == 'none'){
+					$("#webapp-nav").show();
+				}else{
+					$("#webapp-nav").hide();
+				}
+
+
+			}, 500);
+
+		});
+
+
+	</script>
+
+
+</body>
+</html>

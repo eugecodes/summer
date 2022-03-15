@@ -1,0 +1,73 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block page_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/customers/customers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/lists.css' %}">
+{% endblock page_styles %}
+
+{% block extra_js %}
+    <script src="{% static 'app/scripts/custom/angular-customers.js' %}"></script>
+{% endblock extra_js %}
+
+{% block body %}
+<div ng-controller="customersController">
+
+
+    <!-- <i id="fab" class="ion-ios-keypad"></i> -->
+
+
+    <div id="bodywrap">
+
+
+
+        <div class="left-sidebar customer-sidebar">
+
+            <h1>
+                [[customer.name]]
+                <small>
+                    <div ng-if="customer.address_line1">[[customer.address_line1]],</div>
+                    <div ng-if="customer.address_line2">[[customer.address_line2]],</div>
+                    <span ng-if="customer.city">[[customer.city]],</span>
+                    <span ng-if="customer.state_province">[[customer.state_province]],</span>
+                    <span ng-if="customer.postal_code">[[customer.postal_code]]</span>
+                </small>
+            </h1>
+
+            <ul class="sidebar-icon-links">
+                <li><a href="#"><i class="ion-clipboard"></i> Products (8)</a></li>
+                <li><a href="#"><i class="ion-filing"></i> Projects (5)</a></li>
+                <li><a href="#"><i class="ion-person-stalker"></i> Contacts (15)</a></li>
+            </ul>
+
+        </div>
+        <!-- <div class="right-sidebar">
+
+        </div> -->
+
+        <div class="webapp-body nonav">
+
+            <section class="nopadding list-details">
+
+                <h1 class="section-header">Contacts <button class="btn btn-blue btn-sm btn-icon" ng-click="showModal('Add New Contact', '{% static 'app/includes/customers/form-add-contact.html' %}')"><i class="ion-plus"></i>Add New</button></h1>
+                <ul>
+                    <li ng-repeat="contact in customer.contacts">
+                        <h1>[[contact.first_name]] [[contact.last_name]]</h1>
+                        <h2>[[contact.phone_number]]</h2>
+                        <h2>[[contact.email]]</h2>
+                        <h2>[[contact.title]]</h2>
+                    </li>
+                </ul>
+
+            </section>
+
+
+
+
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

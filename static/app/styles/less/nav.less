@@ -1,0 +1,413 @@
+//out: ../css/nav.css, sourcemap: false, compress: true
+
+@import "variables.less";
+
+
+header{
+    box-sizing: border-box;
+
+    background-color: #FFF;
+    position: fixed;
+    border-bottom: 1px solid darken(@blue, 6%);
+    display: block;
+    width: 100%;
+    z-index: 15000;
+    background-color: @blue;
+    height: 54px;
+
+
+    .branding-name{
+        display: block;
+
+        box-sizing: border-box;
+        padding: 15px 10px;
+        margin: 0 auto;
+        text-align: left;
+        vertical-align: middle;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #FFF;
+        font-family: @sans;
+        background-color: darken(@blue, 5%);
+        .gradient(left, darken(@blue, 7%), @blue);
+        font-size: 14pt;
+        font-weight: bolder;
+        line-height: 1em;
+        z-index: 10000;
+        b{
+            margin: 0 0 0 5px;
+        }
+        @media only screen and (min-width : 750px) {
+            display: inline-block;
+            padding: 8px 10px 8px 20px;
+            b{
+                display: block;
+                padding: 0;
+                margin: 0;
+                letter-spacing: 0px;
+            }
+        }
+    }
+    nav{
+        position: fixed;
+        display: none;
+        right: 0;
+        top: 49px;
+        background-color: @white;
+        width: 280px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 5px 2px fade(@black, 5%);
+        @media only screen and (min-width : 750px) {
+            position: relative;
+            top:0;
+            left: 0;
+            width: auto;
+            float: none;
+            box-shadow: none;
+            background-color: transparent;
+        }
+        a{
+            display: block;
+            box-sizing: border-box;
+            padding: 14px 14px;
+            font-weight: bolder;
+            font-size: 10pt;
+            border-bottom: 1px solid @grey;
+            text-transform: uppercase;
+            transition: @transition;
+            &:last-child{
+                border-bottom: none;
+            }
+            &:hover{
+                background-color: fade(@grey, 50%);
+                transition: @transition;
+                @media only screen and (min-width: 750px){
+                    background-color: darken(@blue, 10%);
+                    transition: 0.1s;
+                }
+            }
+            &:active{
+                background-color: @grey;
+                transition: @activetransition;
+                padding: 14px 14px 14px 20px;
+                @media only screen and (min-width : 750px) {
+                    padding: 3px 6px;
+                }
+                @media only screen and (min-width : 1020px) {
+                    padding: 3px 10px;
+                }
+            }
+            @media only screen and (min-width : 750px) {
+                display: inline-block;
+
+                box-sizing: border-box;
+                padding: 6px 10px;
+                border-radius: 15px;
+                border-bottom: none;
+
+                text-transform: uppercase;
+
+                color: @white;
+
+                font-size: 8.5pt;
+                letter-spacing: -0.25px
+            }
+            @media only screen and (min-width : 1020px) {
+                padding: 6px 10px;
+                letter-spacing: 0.25px;
+            }
+        }
+
+        @media only screen and (min-width : 750px) {
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            padding: 0 0 0 25px;
+        }
+    }
+    .user-nav{
+        display: block;
+        box-sizing: border-box;
+        background-color: darken(@blue, 15%);
+        border-radius: 0;
+        float: right;
+        height: 53px;
+        width: 230px;
+        text-align: left;
+        padding: 0 15px;
+        transition: @transition;
+        @media only screen and (min-width : 750px) {
+            display: inline-block;
+            margin-left: 40px;
+        }
+        h1{
+            display: inline-block;
+            text-align: left;
+            font-size: 9pt;
+            color: @white;
+            text-transform: uppercase;
+            letter-spacing: 0.25px;
+            padding: 0;
+            vertical-align: center;
+            position: relative;
+            vertical-align: middle;
+            height: 53px;
+            box-sizing: border-box;
+            padding: 14px 0;
+            b{
+                display: block;
+                font-size: 6.5pt;
+            }
+        }
+        .user-btn{
+            color: @white;
+            font-size: 14pt;
+            display: inline-block;
+            height: 53px;
+            box-sizing: border-box;
+            padding: 0 6px;
+            float: right;
+            line-height: 53px;
+            transition: @transition;
+            &:hover{
+                color: fade(@white, 70%);
+                transition: @transition;
+                cursor: pointer;
+            }
+        }
+        #logout{
+            vertical-align: center;
+            display: inline-block;
+            font-size: 7pt;
+            text-transform: capitalize;
+            letter-spacing: 0.15px;
+            color: @white;
+            border: 2px solid @white;
+            background-color: transparent;
+            border-radius: 14px;
+            padding: 5px 8px;
+            margin: 11px 0 0 0;
+            transition: @transition;
+            &:hover{
+                cursor: pointer;
+                background-color: @white;
+                color: @blue;
+                transition: @transition;
+            }
+        }
+    }
+
+    #mobile-menu{
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        position: absolute;
+        text-align: center;
+        font-size: 22pt;
+        right: 0;
+        top: 0;
+        background-color: @white;
+        box-sizing: border-box;
+        height: 49px;
+        width: 49px;
+        padding: 10px 0 0 0;
+        color: @blue;
+        transition: @transition;
+        z-index: 10000;
+        &.showingMobile{
+            color: fade(@black, 70%);
+            font-size: 32pt;
+            padding: 2px 0 0 0;
+        }
+        &:hover{
+            cursor: pointer;
+            transition: @transition;
+            color: fade(@black, 70%);
+        }
+        &:active{
+            color: @blue;
+            transition: @activetransition;
+        }
+        @media only screen and (min-width : 750px) {
+            display: none;
+        }
+    }
+}
+
+
+
+//
+// Sidebar nav
+//
+#fab{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10000;
+    font-size: 24pt;
+    color: @white;
+    background-color: @blue;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 2px fade(@black, 5%);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 0 0 0;
+    box-shadow: 0px 0px 5px 2px fade(@black, 20%);
+    .radial(@blue, darken(@blue, 7%));
+
+    &:hover{
+        cursor: pointer;
+        transition: @transition;
+        background-color: darken(@blue, 5%);
+    }
+    &:active{
+        transition: @activetransition;
+        background-color: darken(@blue, 10%);
+    }
+    &.showingMobile{
+        color: @white;
+        font-size: 36pt;
+        padding: 2px 0 0px 0;
+        background-color: @red;
+        &:hover{
+            transition: @transition;
+            background-color: darken(@red, 5%);
+        }
+        &:active{
+            transition: @transition;
+            background-color: darken(@red, 10%);
+        }
+    }
+    @media only screen and (min-width : 750px) {
+        display: none;
+    }
+}
+
+
+
+//
+//
+// SIDEBARS
+
+.left-sidebar,
+.right-sidebar{
+    width: 18%;
+    width: 230px;
+    box-sizing: border-box;
+    padding: 25px 25px;
+    display: block;
+    z-index: 500;
+    position: fixed;
+    top: 54px;
+    height: 100%;
+    .sidebar-header{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 11pt;
+        letter-spacing: 0.15px;
+        font-weight: 400;
+    }
+    .sidebar-search{
+        input{
+            border: 1.5px solid @grey;
+            margin: 0 auto;
+            width: 100%;
+            display: block;;
+            font-size: 9pt;
+            font-weight: 400;
+            padding: 7px 7px 7px 23px;
+            margin: 18px 0;
+            letter-spacing: 0.25px;
+            border-radius: 3px;
+        }
+        &:before{
+            content: '\f2f5';
+            color: darken(@grey, 15%);
+            display: block;
+            float: left;
+            font-family: @ionicons;
+            height: 0;
+            width: 0;
+            position: relative;
+            top: 7px;
+            left: 7px;
+            font-size: 12pt;
+        }
+    }
+    .sidebar-icon-links{
+        list-style-type: none;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 15px 0;
+        li{
+            a{
+                box-sizing: border-box;
+                padding: 6px 0;
+                display: block;
+                color: @text;
+                font-size: 10pt;
+                font-weight: 400;
+                transition: @transition;
+                &:hover{
+                    cursor: pointer;
+                    color: @blue;
+                    transition: @transition;
+                }
+                i{
+                    font-size: 16pt;
+                    width: 25px;
+                    display: inline-block;
+                    position: relative;
+                    top: 2px;
+                    color: @blue;
+                }
+            }
+        }
+    }
+}
+.left-sidebar{
+    left: 0;
+    border-right: 2px solid rgba(0,0,200,0.04);
+    // border-right: 2px solid @grey;
+    // background-color: lighten(#F1F7F7, 4%);
+    background-color: rgba(0,0,200,0.0175);
+}
+.right-sidebar{
+    right: 0;
+    border-left: 2px solid rgba(0,0,200,0.04);
+    // border-left: 2px solid @grey;
+    // background-color: lighten(#F1F7F7, 4%);
+    background-color: rgba(0,0,200,0.0175);
+}
+
+.customer-list{
+    list-style-type: none;
+    padding: 0 0;
+    margin: 0 auto;
+    li{
+        display: block;
+        box-sizing: border-box;
+        padding: 8px 0;
+        a{
+            display: block;
+            font-size: 9.5pt;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+            color: @text;
+            transition: @transition;
+            color: fade(@text, 75%);
+            b{
+                display: block;
+                font-size: 7.5pt;
+                font-weight: 300;
+                opacity: 0.7;
+            }
+            &:hover{
+                color: @text;
+            }
+        }
+    }
+}

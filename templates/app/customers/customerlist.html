@@ -1,0 +1,81 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block page_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/lists.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/customers/customers.css' %}">
+{% endblock page_styles %}
+
+{% block extra_js %}
+    <script src="{% static 'app/scripts/custom/angular-customers-list.js' %}"></script>
+{% endblock extra_js %}
+
+{% block body %}
+<div ng-controller="customersListController">
+
+
+    <!-- <i id="fab" class="ion-ios-keypad"></i> -->
+
+
+    <div id="bodywrap">
+
+        <div class="left-sidebar">
+            <!-- <h1 class="sidebar-header">Recent Contacts</h1>
+            <div class="sidebar-search">
+                <input type="text" placeholder="Type to search..." />
+            </div>
+            <ul class="customer-list">
+                <li><a href="#">Austin Grandt<b>Export Abroad</a></a></li>
+                <li><a href="#">Willy Hakizimana<b>Granah</b></a></li>
+                <li><a href="#">Mitch Samuels<b>Mitchs.co</b></a></li>
+                <li><a href="#">Jane Doe<b>ABC International</b></a></li>
+                <li><a href="#">Jack Black<b>School of Rock</b></a></li>
+                <li><a href="#">Ricky Rubio<b>MN Timberwolves</b></a></li>
+            </ul> -->
+
+
+        </div>
+        <div class="right-sidebar customer-list-right-sidebar">
+
+            <button class="btn btn-blue" ng-click="showModal('Add New Customer', '{% static 'app/includes/customers/form-add-customer.html' %}')" id="add-customer">Add Customer</button>
+
+
+            <input type="text" placeholder="Type to search..." ng-model="searchCustomerList"/>
+            <br><br><br>
+            <h1 class="sidebar-header">Sort By:</h1>
+            <div class="sortby">
+                <a ng-click="orderCustomerListBy = '-created_at'" ng-class="{true: 'active'}[orderCustomerListBy == '-created_at']">Most Recent</a>
+                <a ng-click="orderCustomerListBy = 'name'" ng-class="{true: 'active'}[orderCustomerListBy == 'name']">Name</a>
+                <a ng-click="orderCustomerListBy = 'state_province'" ng-class="{true: 'active'}[orderCustomerListBy == 'state_province']">State</a>
+                <a ng-click="orderCustomerListBy = 'country'" ng-class="{true: 'active'}[orderCustomerListBy == 'country']">Country</a>
+            </div>
+
+
+
+        </div>
+
+        <div class="webapp-body">
+
+
+            <section class="nopadding list">
+                <div class="list-meta">
+                    <h1>Your Customers</h1>
+                </div>
+
+                <ul>
+                    <li ng-repeat="customer in customers | orderBy : orderCustomerListBy | filter: searchCustomerList track by $index"><a ng-click="goToCustomer(customer)" target="_self"><b>[[customer.name]]</b><em>[[customer.industry]]</em><i>[[customer.state_province]]</i></a></li>
+                    <!-- <li ng-repeat="customer in customers | orderBy : orderCustomerListBy | filter: searchCustomerList track by $index"><a href="/customer/?t=[[customer]]" target="_self"><b>[[customer.name]]</b><em>[[customer.industry]]</em><i>[[customer.state_province]]</i></a></li> -->
+                </ul>
+
+            </section>
+
+
+
+
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

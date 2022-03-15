@@ -1,0 +1,73 @@
+//out: ../css/typography.css, sourcemap: false, compress: true
+
+@import "variables.less";
+
+*{
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    outline: none;
+    &:hover{
+        outline: none;
+        -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    }
+    &:focus{
+        -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+        outline: none;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: @blue;
+    &:visited{
+        text-decoration: none;
+    }
+}
+
+#header(){
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    font-family: @body;
+    color: @black;
+    letter-spacing: -0.3px;
+}
+h1{
+    #header();
+    font-size: 2em;
+}
+h2{
+    #header();
+    font-size: 1.5em;
+}
+h3{
+    #header();
+    font-size: 1.17em;
+}
+h4{
+    #header();
+    font-size: 1.12em;
+}
+h5{
+    #header();
+    font-size: .83em;
+}
+h6{
+    #header();
+    font-size: .75em;
+}
+
+
+.label{
+    font-size: inherit;
+    box-sizing: border-box;
+    padding: 3px 6px 3px 6px;
+    border: 2px solid @white;
+    color: @white;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-family: @body;
+    font-size: 7pt;
+    font-weight: 900;
+}

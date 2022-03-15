@@ -1,0 +1,114 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block page_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles/css/dashboard.css' %}">
+{% endblock page_styles %}
+
+{% block extra_js %}
+    <script src="{% static 'app/scripts/custom/angular-dashboard.js' %}"></script>
+{% endblock extra_js %}
+
+{% block body %}
+<div ng-controller="dashboardController">
+
+
+    <!-- <i id="fab" class="ion-ios-keypad"></i> -->
+
+
+    <div id="bodywrap">
+
+        <div class="left-sidebar">
+            <h1 class="sidebar-header">Recent Customers</h1>
+            <div class="sidebar-search">
+                <input type="text" placeholder="Type to search..." ng-model="searchRecent" />
+            </div>
+            <ul class="customer-list">
+                <li ng-repeat="customer in recentCustomers | orderBy : '-created_at' | filter: searchRecent | limitTo: 6 track by $index"><a href="#" ng-click="goToRecent(customer)">[[customer.name]]<b>[[customer.state_province]]</b></a></li>
+            </ul>
+
+        </div>
+        <!-- <div class="right-sidebar">
+            <h1 class="sidebar-header">Your Numbers</h1>
+            <br>
+            <div class="dashboard-sidebar-stats">
+                <b>14</b>
+                <em>Clients</em>
+            </div>
+            <div class="dashboard-sidebar-stats">
+                <b>7</b>
+                <em>Projects</em>
+            </div>
+            <div class="dashboard-sidebar-stats">
+                <b>24</b>
+                <em>Interactions</em>
+            </div>
+        </div> -->
+
+        <div class="webapp-body nonav">
+
+            <section class="nopadding">
+                <h1 class="section-header">Your Activity This Week</h1>
+                <div id="test-chart-wrapper">
+                    <div class="ct-chart ct-major-tenth" id="test-chart"></div>
+                </div>
+            </section>
+
+
+
+            <section class="section-50 first">
+                <h1 class="section-header">From The Blog</h1>
+                <div id="dashboard-newsfeed">
+                    <!-- <a ng-repeat="item in fromTheBlog track by $index" href="[[item.url]]"ng-bind-html="item.title | unsafe" target="_blank"></a> -->
+                    <a href="http://blog.exportabroad.com/announcing-our-report-the-state-of-trade-2016/" target="_blank">Announcing Our Report, The State Of Trade 2016</a>
+                    <a href="http://blog.exportabroad.com/as-russia-tumbles-putin-looks-to-the-brics/" target="_blank">As Russia Tumbles, Putin Looks to the BRICS</a>
+                    <a href="http://blog.exportabroad.com/global-free-trade-agreements/" target="_blank">Global Free Trade Agreements</a>
+                    <a href="http://blog.exportabroad.com/why-precision-castparts-is-worth-32-billion/" target="_blank">Why PRecision Castparts is Worth $32 Billion</a>
+                    <a href="http://blog.exportabroad.com/vc-funding-fifteen-year-high/" target="_blank">VC Funding's Fifteen-Year High</a>
+                    <a href="http://blog.exportabroad.com/building-an-export-economy/" target="_blank">Building an Export Economy</a>
+                    <a href="http://blog.exportabroad.com/is-germanys-trade-surplus-hurting-eu-recovery/" target="_blank">Is Germany's Trade Surplus Hurting the EU Recovery?</a>
+                </div>
+            </section><!--
+            --><section class="section-50">
+                <h1 class="section-header">Exchange Rates: $1 USD</h1>
+                <div id="dashboard-exchange">
+                    <span class="rate" ng-repeat="(currency, value) in currencyRates"><b>[[currency]]<b> : <i>[[value.toFixed( 2 )]]</i></span>
+                    <!-- You can do something cool if you do this other thing. Try it now by clicking on that one other thing at the top. -->
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+new Chartist.Line(
+    '#test-chart',
+    {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        series: [[30, 20, 80, 60, 100]]
+    }, {
+        low: 0,
+        showArea: true,
+        fullWidth: true,
+        axisX: {
+            showLabel: false,
+            showGrid: true
+        },
+        axisY: {
+            showLabel: false,
+            showGrid: false
+        }
+    });
+</script>
+{% endblock %}

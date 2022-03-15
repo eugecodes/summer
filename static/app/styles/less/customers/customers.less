@@ -1,0 +1,62 @@
+//out: ../../css/customers/customers.css, sourcemap: false, compress: true
+
+@import "../variables.less";
+
+
+
+//
+// CUSTOMER list
+//
+.customer-list-right-sidebar{
+    .sortby{
+        box-sizing: border-box;
+        padding: 10px 0;
+        margin: 0 0 35px 0;
+        a{
+            display: block;
+            font-size: 10pt;
+            box-sizing: border-box;
+            margin: 3px auto;
+            font-weight: bolder;
+            padding: 3px 5px 3px 10px;
+            transition: @transition;
+            &:hover{
+                color: darken(@blue, 15%);
+                transition: @transition;
+                cursor: pointer;
+            }
+            &.active{
+                color: @text;
+            }
+        }
+    }
+    input{
+        width: 100%;
+    }
+    #add-customer{
+        margin: 0 auto 25px auto;
+        width: 100%;
+        display: block;
+    }
+}
+
+.customer-sidebar{
+    h1{
+        font-weight: bolder;
+        font-size: 13pt;
+        border-top: 1px solid @grey;
+        border-bottom: 2px solid @grey;
+        box-sizing: border-box;
+        padding: 15px 0;
+        letter-spacing: 0.5px;
+        small{
+            font-size: 8.5pt;
+            font-weight: lighter;
+            display: block;
+            box-sizing: border-box;
+            padding: 2px 0 0 0;
+            letter-spacing: 0.25px;
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+<span id="modal-body" ng-controller="customersListController">
+    <p>
+        Fill out the form below to add a new customer. Required fields are marked with an asterisk (<i class="ion-ios-medical"></i>).
+    </p>
+    <form class="side-modal-form">
+        <label>Customer Name <i class="ion-ios-medical"></i></label>
+        <input type="text" ng-model="newCust_name" />
+        <label>Description</label>
+        <textarea  ng-model="newCust_description"></textarea>
+        <label>Website URL (include http://)</label>
+        <input type="url" ng-model="newCust_url" />
+        <label>Address <i class="ion-ios-medical"></i></label>
+        <input type="text" ng-model="newCust_address" />
+        <label>Address (cont.)</label>
+        <input type="text" ng-model="newCust_address2" />
+        <label>City <i class="ion-ios-medical"></i></label>
+        <input type="text" ng-model="newCust_city" />
+        <label>State</label>
+        <input type="text" ng-model="newCust_state" />
+        <label>Postal Code <i class="ion-ios-medical"></i></label>
+        <input type="text" ng-model="newCust_postal" />
+        <!-- <label>Country <i class="ion-ios-medical"></i></label>
+        <input type="text" ng-model="newCust_country" /> -->
+        <label>Industry</label>
+        <select ng-model="newCust_industry"  ng-options="item as item for item in industries">
+        </select>
+
+        <div class="side-modal-actions">
+            <button class="btn btn-lg" ng-click="closeModal()">Cancel</button>
+            <button class="btn btn-blue btn-lg btn-right" ng-click="addCustomer();">[[newCustSubmit]]</button>
+        </div>
+    </form>
+
+</span>

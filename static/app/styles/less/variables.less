@@ -1,0 +1,43 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(../../visuals/icons/ionicons/css/ionicons.min.css);
+
+@sans: 'Montserrat', sans-serif;
+@body: 'Dropd Sans', sans-serif;
+@ionicons: 'Ionicons';
+
+@blue: #407EF8;
+@black: #072041;
+@text: #282C41;
+@white: #FFF;
+@grey: #F4F4F4;
+@darkgrey: #1F2B35;
+@mediumgrey: lighten(#8F9AAC, 10%);
+@red: #D85D65;
+
+@transition: 0.15s;
+@activetransition: 0.05s;
+
+@boxshadow: 0px 2px 5px 0px fade(@black, 10%);
+
+
+
+/* Gradient Mixin */
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+/* Radial Mixin */
+.radial (@start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-radial-gradient(@start, @stop);
+	background-image: -moz-radial-gradient(@start, @stop);
+	background-image: -o-radial-gradient(@start, @stop);
+	background-image: -ms-radial-gradient(@start, @stop);
+	background-image: radial-gradient(@start, @stop);
+}

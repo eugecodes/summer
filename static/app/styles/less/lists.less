@@ -1,0 +1,112 @@
+//out: ../../styles/css/lists.css, sourcemap: false, compress: true
+
+@import "variables.less";
+
+
+.list{
+    .list-meta{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 25px 25px 25px;
+        border-bottom: 1px solid @grey;
+        h1{
+            display: inline-block;
+            font-size: 12pt;
+            letter-spacing: 1px;
+            color: @text;
+            padding: 11px 0 0 0;
+        }
+        input{
+            float: right;
+        }
+    }
+    ul{
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0 25px;
+        box-sizing: border-box;
+        li{
+            a{
+                box-sizing: border-box;
+                padding: 14px 25px;
+                display: block;
+                border-bottom: 1px solid @grey;
+                font-size: 9pt;
+                letter-spacing: 1px;
+                transition: 0.1s;
+                b{
+                    display: inline-block;
+                    width: 40%;
+                }
+                em{
+                    font-style: normal;
+                    width: 20%;
+                    display: inline-block;
+                }
+                i{
+                    font-style: normal;
+                    display: inline-block;
+                }
+                &:before{
+                    content: '\f401';
+                    font-family: @ionicons;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    background-color: lighten(@grey, 3%);
+                    color: lighten(@text, 10%);
+                    transition: 0.1s;
+                    cursor: pointer;
+                    &:before{
+                        content: '\f400';
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.list-details{
+    ul{
+        display: block;
+        padding: 0 1.5%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        list-style-type: none;
+        li{
+            // background-color: rgba(0,0,200,0.0175);
+            display: inline-block;
+            width: 22%;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding: 15px;
+            margin: 0 1.5%;
+            // border: 2px solid @grey;
+            transition: @transition;
+            h1{
+                font-size: 11pt;
+                display: block;
+                letter-spacing: 0.25px;
+            }
+            h2{
+                font-size: 9pt;
+                font-weight: lighter;
+                display: block;
+                letter-spacing: 0.45px;
+                box-sizing: border-box;
+                padding: 2px 0 0 0;
+            }
+            h3{
+                font-size: 9pt;
+                font-weight: lighter;
+                display: block;
+                letter-spacing: 0.25px;
+                box-sizing: border-box;
+                padding: 2px 0 0 0;
+            }
+        }
+    }
+}
